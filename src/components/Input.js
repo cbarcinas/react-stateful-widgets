@@ -45,10 +45,11 @@ export default function Input() {
     const { value } = evt.target;
 
     /* STEP 4 */
-    setInputValue("");
+    setInputValue(value);
   };
   const reset = () => {
     /* STEP 5 */
+    setInputValue("");
   };
 
   const style = {
@@ -57,6 +58,7 @@ export default function Input() {
     color: "royalblue",
     color: inputValue.length <= 10 ? "royalblue" : "crimson",
     textTransform: "uppercase", // step 3 added
+    //css properties need to be camel case
   };
 
   return (
@@ -65,6 +67,12 @@ export default function Input() {
       <div id="output" style={style}></div> {/* STEP 3 */}
       <div>
         <input id="input" type="text" onChange={changeInput} /> {/* STEP 6 */}
+        <input
+          type="text"
+          id="input"
+          onChange={changeInput}
+          value={inputValue}
+        />
         <button id="resetInput" onClick={reset}>
           Reset
         </button>
