@@ -62,7 +62,7 @@ export default function Moods() {
       <h2>Moods</h2>
       <div id="mood" style={style}>
         {mood}
-      </div>{" "}
+      </div>{""}
       {/* STEP 3 */}
       <div>
         <button id="makeHappy" onClick={makeHappy}>
