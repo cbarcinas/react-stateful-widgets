@@ -52,13 +52,12 @@ export default function Spinner() {
       <h2>Spinner</h2>
       {
         spinnerOn && (
-          <div id="spinner" className="spinner">
-            --+--
-          </div>
+          <div id="spinner" className="spinner"> --+--</div>
         ) /* STEP 2 */
       }
+      {/* STEP 3 */}
       <button id="toggleSpinner" onClick={toggleSpinner}>
-        {spinnerOn ? "hide" : "show"} Spinner {/* STEP 3 */}
+        {spinnerOn ? "hide" : "show"} spinner
       </button>
     </div>
   );

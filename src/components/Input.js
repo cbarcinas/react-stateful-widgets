@@ -39,6 +39,7 @@ import React, { useState } from "react"; /* STEP 0 */
 export default function Input() {
   /* STEP 1 */
   const [inputValue, setInputValue] = useState("");
+
   const changeInput = (evt) => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
@@ -64,9 +65,12 @@ export default function Input() {
   return (
     <div className="widget-input container">
       <h2>Input</h2>
-      <div id="output" style={style}></div> {/* STEP 3 */}
+      <div id="output" style={style}>
+        {inputValue}
+      </div>
+      {/* STEP 3 */}
       <div>
-        <input id="input" type="text" onChange={changeInput} /> {/* STEP 6 */}
+        {/* STEP 6 */}
         <input
           type="text"
           id="input"
